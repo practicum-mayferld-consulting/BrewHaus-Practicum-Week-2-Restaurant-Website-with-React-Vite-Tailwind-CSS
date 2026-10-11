@@ -1,11 +1,11 @@
-# 🍷 Savoria Bistro & Cellar - Luxury Restaurant Website
+# Savoria Bistro & Cellar - Luxury Restaurant Website
 
 A sophisticated single-page restaurant website showcasing modern CSS techniques, accessibility best practices, and responsive design principles. Built with pure HTML5 and CSS3 without any frameworks or libraries.
 
-## ✨ **Live Demo**
-🔗 **[View Live Site](https://practicum-mayferld-consulting.github.io/vanilla-html-css-restaurant/)**
+## Live Demo
+**[View Live Site](https://practicum-mayferld-consulting.github.io/vanilla-html-css-restaurant/)**
 
-## 🎯 **Project Overview**
+## Project Overview
 
 This project demonstrates mastery of front-end web development fundamentals by creating a luxury restaurant website that rivals industry-leading establishments. The design combines the intimacy of fine dining with modern web technologies to create an immersive digital experience.
 
@@ -15,26 +15,26 @@ This project demonstrates mastery of front-end web development fundamentals by c
 - **Restaurant Psychology**: Color and spacing choices that evoke upscale dining
 - **Accessible Excellence**: WCAG 2.1 AA compliance without sacrificing visual appeal
 
-## 🏗️ **Technical Implementation**
+## Technical Implementation
 
-### **Core Requirements Met**
-- ✅ **Zero Frameworks**: Pure HTML5 and CSS3 only
-- ✅ **Box-Sizing Border-Box**: Universal application for predictable layouts
-- ✅ **CSS Custom Properties**: Comprehensive design token system
-- ✅ **Flexbox**: Navigation, menu items, button groups, footer layout
-- ✅ **CSS Grid**: Philosophy section, menu layout, forms, responsive sections
-- ✅ **Semantic HTML5**: Proper landmarks with exactly one H1 tag
-- ✅ **Mobile-First Design**: Progressive enhancement from 320px to 1280px+
-- ✅ **Zero Horizontal Scroll**: Guaranteed across all device sizes
+### Core Requirements Met
+- Zero Frameworks: Pure HTML5 and CSS3 only
+- Box-Sizing Border-Box: Universal application for predictable layouts
+- CSS Custom Properties: Comprehensive design token system
+- Flexbox: Navigation, menu items, button groups, footer layout
+- CSS Grid: Philosophy section, menu layout, forms, responsive sections
+- Semantic HTML5: Proper landmarks with exactly one H1 tag
+- Mobile-First Design: Progressive enhancement from 320px to 1280px+
+- Zero Horizontal Scroll: Guaranteed across all device sizes
 
-### **Advanced Features**
+### Advanced Features
 - **Responsive Typography**: `clamp()` functions for fluid scaling
 - **Interactive Menu System**: Category filtering with wine pairings
 - **Sophisticated Forms**: Multi-input reservation system with validation
 - **Performance Optimization**: Efficient CSS architecture and font loading
 - **Accessibility Excellence**: Keyboard navigation, screen reader support
 
-## 📁 **Project Structure**
+## Project Structure
 
 ```
 vanilla-html-css-restaurant/
@@ -46,9 +46,9 @@ vanilla-html-css-restaurant/
 └── assessment-defense-cheat-sheet.md # Technical explanation guide
 ```
 
-## 🎨 **Design System**
+## Design System
 
-### **Color Palette**
+### Color Palette
 ```css
 --surface: #131313;                 /* Deep charcoal base */
 --primary: #f2be8c;                 /* Warm amber accent */
@@ -58,22 +58,22 @@ vanilla-html-css-restaurant/
 --text-secondary: #d6d0c5;          /* Body text */
 ```
 
-### **Typography Scale**
+### Typography Scale
 - **Display**: Playfair Display (serif) for headings and elegance
 - **Body**: Plus Jakarta Sans (sans-serif) for readability and interface
 - **Responsive**: `clamp()` functions ensure perfect scaling across devices
 
-### **Spacing System**
+### Spacing System
 8px base grid system with systematic scale from 0.5rem to 4rem
 
-## 🔧 **Getting Started**
+## Getting Started
 
-### **Prerequisites**
+### Prerequisites
 - Modern web browser with CSS Grid support
 - Basic understanding of HTML5 and CSS3
 - Text editor or IDE
 
-### **Installation**
+### Installation
 ```bash
 # Clone the repository
 git clone https://github.com/practicum-mayferld-consulting/vanilla-html-css-restaurant.git
@@ -88,22 +88,22 @@ code .
 open index.html
 ```
 
-### **Development**
+### Development
 No build process required! Simply edit the HTML and CSS files and refresh your browser to see changes.
 
-## 📱 **Browser Support**
+## Browser Support
 
-### **Fully Supported**
+### Fully Supported
 - Chrome 57+ (Grid support)
 - Firefox 52+ (Grid support)  
 - Safari 10.1+ (Grid support)
 - Edge 16+ (Grid support)
 
-### **Graceful Degradation**
+### Graceful Degradation
 - Older browsers receive simplified layouts via progressive enhancement
 - Core content remains accessible on all browsers
 
-## ♿ **Accessibility Features**
+## Accessibility Features
 
 - **WCAG 2.1 AA Compliance**: All color combinations exceed 4.5:1 contrast ratio
 - **Keyboard Navigation**: Full tab order with visible focus indicators
@@ -111,7 +111,7 @@ No build process required! Simply edit the HTML and CSS files and refresh your b
 - **Reduced Motion**: Respects `prefers-reduced-motion` user settings
 - **High Contrast**: Alternative styles for high contrast mode users
 
-## 🎓 **Educational Value**
+## Educational Value
 
 This project serves as a comprehensive learning resource demonstrating:
 
@@ -121,17 +121,17 @@ This project serves as a comprehensive learning resource demonstrating:
 - **Performance**: Efficient CSS without preprocessors or build tools
 - **Design Systems**: Professional approach to color, typography, and spacing
 
-## 📄 **License**
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 **Acknowledgments**
+## Acknowledgments
 
 - **Google Fonts** for Playfair Display and Plus Jakarta Sans typography
 - **Material Design 3** for color system inspiration and accessibility guidelines
 - **Modern CSS** techniques and best practices from the web development community
 
-## 📞 **Contact**
+## Contact
 
 For questions about this project or collaboration opportunities:
 - GitHub: [@practicum-mayferld-consulting](https://github.com/practicum-mayferld-consulting)
@@ -139,4 +139,4 @@ For questions about this project or collaboration opportunities:
 
 ---
 
-**Built with 💙 using pure HTML5 and CSS3**
+**Built with care using pure HTML5 and CSS3**
