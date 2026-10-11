@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bella Vista - Authentic Italian cuisine with fresh ingredients and traditional recipes">
+    <title>Bella Vista Restaurant - Authentic Italian Dining</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <!-- Semantic landmark: Contains site navigation and branding -->
+    <header class="site-header">
+        <nav class="navbar">
+            <!-- Logo/Brand section using flexbox for alignment -->
+            <div class="navbar-brand">
+                <h2>Bella Vista</h2>
+            </div>
+            
+            <!-- Main navigation using semantic nav element -->
+            <!-- Flexbox used here for horizontal alignment of nav items -->
+            <ul class="navbar-nav">
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#reservation" class="nav-link">Reservation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <!-- Semantic landmark: Contains all primary page content -->
+    <main class="main-content">
+        
+        <!-- HERO SECTION -->
+        <!-- The only H1 on the entire page - critical for SEO and accessibility -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Authentic Italian Flavors</h1>
+                <p class="hero-tagline">Experience the taste of Italy with our traditional recipes and fresh, locally-sourced ingredients</p>
+                <!-- Primary CTA button leading to reservation section -->
+                <a href="#reservation" class="btn btn-primary">Make a Reservation</a>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <!-- CSS Grid layout used here for two-dimensional arrangement -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                
+                <!-- Grid container with explicit areas defined in CSS -->
+                <div class="about-grid">
+                    <!-- Grid item 1: Restaurant story -->
+                    <div class="about-story">
+                        <h3>From Tuscany to Your Table</h3>
+                        <p>Founded in 1995 by Chef Marco Rossini, Bella Vista brings the authentic flavors of Tuscany to your neighborhood. Our commitment to traditional cooking methods and locally-sourced ingredients creates an unforgettable dining experience.</p>
+                    </div>
+                    
+                    <!-- Grid item 2: Culinary philosophy -->
+                    <div class="about-philosophy">
+                        <h3>Our Culinary Philosophy</h3>
+                        <p>We believe in simplicity and quality. Every dish is prepared with hand-selected ingredients, many sourced from local farms and our own herb garden. Our pasta is made fresh daily using traditional Italian techniques passed down through generations.</p>
+                    </div>
+                    
+                    <!-- Grid item 3: Fresh ingredients highlight -->
+                    <div class="about-ingredients">
+                        <h3>Fresh & Local</h3>
+                        <p>Our menu changes seasonally to showcase the best local produce. From San Marzano tomatoes to locally-raised organic meats, we partner with trusted suppliers who share our commitment to quality and sustainability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU SECTION - CORE FEATURE -->
+        <!-- CSS Grid used for the overall menu layout structure -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+                
+                <!-- Menu grid container - demonstrates CSS Grid for two-dimensional layout -->
+                <div class="menu-grid">
+                    
+                    <!-- STARTERS CATEGORY -->
+                    <article class="menu-category">
+                        <!-- Flexbox used here for category header alignment -->
+                        <div class="category-header">
+                            <h3>Starters</h3>
+                        </div>
+                        
+                        <!-- Individual menu items using semantic article elements -->
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Bruschetta Classica</h4>
+                                <p class="item-description">Grilled bread topped with fresh tomatoes, basil, garlic and extra virgin olive oil</p>
+                            </div>
+                            <span class="item-price">$12</span>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Antipasto della Casa</h4>
+                                <p class="item-description">Selection of cured meats, artisanal cheeses, olives and roasted vegetables</p>
+                            </div>
+                            <span class="item-price">$18</span>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Calamari Fritti</h4>
+                                <p class="item-description">Crispy fried squid rings served with marinara sauce and lemon</p>
+                            </div>
+                            <span class="item-price">$15</span>
+                        </div>
+                    </article>
+
+                    <!-- MAINS CATEGORY -->
+                    <article class="menu-category">
+                        <div class="category-header">
+                            <h3>Main Courses</h3>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Spaghetti Carbonara</h4>
+                                <p class="item-description">House-made pasta with pancetta, eggs, pecorino romano and black pepper</p>
+                            </div>
+                            <span class="item-price">$22</span>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Osso Buco alla Milanese</h4>
+                                <p class="item-description">Braised veal shanks with saffron risotto and gremolata</p>
+                            </div>
+                            <span class="item-price">$34</span>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Branzino al Sale</h4>
+                                <p class="item-description">Whole Mediterranean sea bass baked in sea salt with herbs and lemon</p>
+                            </div>
+                            <span class="item-price">$28</span>
+                        </div>
+                    </article>
+
+                    <!-- DESSERTS CATEGORY -->
+                    <article class="menu-category">
+                        <div class="category-header">
+                            <h3>Desserts</h3>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Tiramisu</h4>
+                                <p class="item-description">Traditional layered dessert with espresso-soaked ladyfingers and mascarpone</p>
+                            </div>
+                            <span class="item-price">$9</span>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Panna Cotta</h4>
+                                <p class="item-description">Silky vanilla custard topped with seasonal berry compote</p>
+                            </div>
+                            <span class="item-price">$8</span>
+                        </div>
+                        
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Gelato Selection</h4>
+                                <p class="item-description">Three scoops of our house-made gelato: pistachio, stracciatella, and limoncello</p>
+                            </div>
+                            <span class="item-price">$10</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESERVATION SECTION - MAIN CTA -->
+        <!-- Semantic form with proper labels and input types for accessibility -->
+        <section id="reservation" class="reservation-section">
+            <div class="container">
+                <h2 class="section-title">Make a Reservation</h2>
+                <p class="section-subtitle">Reserve your table for an unforgettable dining experience</p>
+                
+                <!-- HTML5 form with semantic structure and proper input types -->
+                <form class="reservation-form" action="#" method="post">
+                    <!-- Form grid using CSS Grid for responsive form layout -->
+                    <div class="form-grid">
+                        
+                        <!-- Name input with proper labeling for accessibility -->
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <!-- Email input with HTML5 validation -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <!-- Phone input with tel type for mobile keyboard optimization -->
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                        
+                        <!-- Date input with HTML5 date picker -->
+                        <div class="form-group">
+                            <label for="date" class="form-label">Reservation Date</label>
+                            <input type="date" id="date" name="date" class="form-input" required>
+                        </div>
+                        
+                        <!-- Time input with HTML5 time picker -->
+                        <div class="form-group">
+                            <label for="time" class="form-label">Preferred Time</label>
+                            <input type="time" id="time" name="time" class="form-input" required>
+                        </div>
+                        
+                        <!-- Number input for guest count with min/max validation -->
+                        <div class="form-group">
+                            <label for="guests" class="form-label">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" class="form-input" min="1" max="12" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit button styled as primary CTA -->
+                    <button type="submit" class="btn btn-primary btn-full">Reserve Your Table</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- Semantic landmark containing contact info and additional links -->
+    <footer id="contact" class="site-footer">
+        <div class="container">
+            <!-- Footer content using flexbox for responsive layout -->
+            <div class="footer-content">
+                
+                <!-- Operating hours section -->
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Monday - Thursday:</span>
+                            <span>5:00 PM - 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Friday - Saturday:</span>
+                            <span>5:00 PM - 11:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sunday:</span>
+                            <span>4:00 PM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Location and contact info -->
+                <div class="footer-section">
+                    <h3>Location & Contact</h3>
+                    <address class="contact-info">
+                        <p>123 Italian Way<br>
+                        Little Italy, NY 10012</p>
+                        <p>Phone: <a href="tel:+12125551234">(212) 555-1234</a></p>
+                        <p>Email: <a href="mailto:info@bellavista.com">info@bellavista.com</a></p>
+                    </address>
+                </div>
+                
+                <!-- Social media links -->
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Visit our Facebook page">Facebook</a>
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright notice -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
