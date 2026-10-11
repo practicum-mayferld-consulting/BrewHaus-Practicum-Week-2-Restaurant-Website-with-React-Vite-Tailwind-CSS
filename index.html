@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bella Vista - Authentic Italian cuisine with fresh ingredients and traditional recipes">
-    <title>Bella Vista Restaurant - Authentic Italian Dining</title>
+    <meta name="description" content="Savoria Bistro & Cellar - Michelin-selected artisanal bistro featuring seasonal French technique with Californian coastal vitality">
+    <title>Savoria Bistro & Cellar - Michelin Selected Artisanal Dining</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER & NAVIGATION -->
@@ -14,17 +17,26 @@
         <nav class="navbar">
             <!-- Logo/Brand section using flexbox for alignment -->
             <div class="navbar-brand">
-                <h2>Bella Vista</h2>
+                <h2>Savoria</h2>
+                <span class="brand-subtitle">Bistro & Cellar</span>
             </div>
             
             <!-- Main navigation using semantic nav element -->
             <!-- Flexbox used here for horizontal alignment of nav items -->
             <ul class="navbar-nav">
-                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#story" class="nav-link">Story</a></li>
                 <li><a href="#reservation" class="nav-link">Reservation</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#visit" class="nav-link">Visit</a></li>
             </ul>
+            
+            <!-- CTA Button in header -->
+            <div class="navbar-cta">
+                <a href="tel:8005553463" class="nav-phone">📞 (800) 555-DINE</a>
+                <a href="#reservation" class="btn btn-primary btn-sm">Book a Table</a>
+            </div>
         </nav>
     </header>
 
@@ -34,39 +46,137 @@
         
         <!-- HERO SECTION -->
         <!-- The only H1 on the entire page - critical for SEO and accessibility -->
-        <section id="hero" class="hero-section">
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Authentic Italian Flavors</h1>
-                <p class="hero-tagline">Experience the taste of Italy with our traditional recipes and fresh, locally-sourced ingredients</p>
-                <!-- Primary CTA button leading to reservation section -->
-                <a href="#reservation" class="btn btn-primary">Make a Reservation</a>
+                <div class="hero-badges">
+                    <span class="badge">EST. 2018</span>
+                    <span class="badge">MICHELIN SELECTED</span>
+                    <span class="badge">ARTISANAL BISTRO & CELLAR</span>
+                </div>
+                
+                <h1 class="hero-title">Crafted Flavors,<br><em>Unforgettable Moments.</em></h1>
+                
+                <p class="hero-description">An intimate dining sanctuary marrying seasonal French technique with Californian coastal vitality. Each plate tells an honest story of terroir, heritage, and uncompromising craft.</p>
+                
+                <div class="hero-actions">
+                    <a href="#reservation" class="btn btn-primary">Reserve Your Table</a>
+                    <a href="#menu" class="btn btn-secondary">🍽️ Explore Menu</a>
+                </div>
+                
+                <div class="hero-rating">
+                    <div class="rating-stars">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div class="rating-text">
+                        <strong>4.9 / 5</strong>
+                        <span>• 1,200+ Verified Diners • San Francisco</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evening dispatch notice -->
+            <div class="evening-dispatch">
+                <div class="dispatch-content">
+                    <span class="dispatch-icon">🕰️</span>
+                    <span class="dispatch-text">Evening Service Dispatch | Tonight's Seating: First Turn 17:30 • Late Seating 21:15</span>
+                    <a href="#reservation" class="dispatch-cta">
+                        <strong>3 Tables Remaining Tonight</strong>
+                        <span>Instant Lock →</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- PHILOSOPHY SECTION -->
         <!-- CSS Grid layout used here for two-dimensional arrangement -->
-        <section id="about" class="about-section">
+        <section id="about" class="philosophy-section">
             <div class="container">
-                <h2 class="section-title">Our Story</h2>
+                <h2 class="section-title">Our Philosophy</h2>
+                <p class="section-subtitle">Rooted in Soil, Elevated by Passion</p>
                 
-                <!-- Grid container with explicit areas defined in CSS -->
-                <div class="about-grid">
-                    <!-- Grid item 1: Restaurant story -->
-                    <div class="about-story">
-                        <h3>From Tuscany to Your Table</h3>
-                        <p>Founded in 1995 by Chef Marco Rossini, Bella Vista brings the authentic flavors of Tuscany to your neighborhood. Our commitment to traditional cooking methods and locally-sourced ingredients creates an unforgettable dining experience.</p>
+                <!-- Grid container with chef profile and philosophy -->
+                <div class="philosophy-grid">
+                    <!-- Chef profile card -->
+                    <div class="chef-profile">
+                        <div class="chef-image">
+                            <!-- Placeholder chef image -->
+                            <div class="chef-placeholder">👩‍🍳</div>
+                        </div>
+                        <div class="chef-info">
+                            <h3 class="chef-name">Chef Elena Rossi</h3>
+                            <p class="chef-title">Executive Chef & Culinary Director</p>
+                            <p class="chef-background">Ex-Le Gabriel, Paris</p>
+                        </div>
                     </div>
                     
-                    <!-- Grid item 2: Culinary philosophy -->
-                    <div class="about-philosophy">
-                        <h3>Our Culinary Philosophy</h3>
-                        <p>We believe in simplicity and quality. Every dish is prepared with hand-selected ingredients, many sourced from local farms and our own herb garden. Our pasta is made fresh daily using traditional Italian techniques passed down through generations.</p>
+                    <!-- Philosophy stats -->
+                    <div class="philosophy-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">🌱</span>
+                            <div class="stat-content">
+                                <h4>Terroir First</h4>
+                                <p>100% Organically sourced through daily harvests from 24 regenerative farms across Sonoma and the Napa benchlands.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="mini-stat">
+                                <span class="stat-number">45d</span>
+                                <span class="stat-label">Dry-Aged Cuts</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="stat-number">24</span>
+                                <span class="stat-label">Micro-Farms</span>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="stat-number">350+</span>
+                                <span class="stat-label">Cellar Labels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Philosophy text blocks -->
+                <div class="philosophy-text">
+                    <div class="text-block">
+                        <p>At Savoria, cooking is not performance—it is communion. We celebrate the tension between classic French rigor and California's wild coastal bounty. Each day begins with baskets brought directly from Sebastopol soil and concludes beside our open white-oak hearth.</p>
                     </div>
                     
-                    <!-- Grid item 3: Fresh ingredients highlight -->
-                    <div class="about-ingredients">
-                        <h3>Fresh & Local</h3>
-                        <p>Our menu changes seasonally to showcase the best local produce. From San Marzano tomatoes to locally-raised organic meats, we partner with trusted suppliers who share our commitment to quality and sustainability.</p>
+                    <div class="text-block">
+                        <p>Our kitchen rejects industrial shortcuts. Sauces simmer undisturbed for thirty-six hours; butter is cultured in-house with sea salts hand-harvested along Big Sur. Here, dining returns to its purest form: unhurried, multisensory, and profound.</p>
+                    </div>
+                </div>
+                
+                <!-- Chef quote -->
+                <blockquote class="chef-quote">
+                    <p>"True culinary luxury isn't excess—it is the reverence for pure, unadulterated ingredients treated with absolute devotion."</p>
+                    <cite>
+                        <strong>Elena Rossi</strong>
+                        <span>San Francisco Chronicle Chef of the Year 2023</span>
+                    </cite>
+                </blockquote>
+                
+                <!-- Purveyors section -->
+                <div class="purveyors-section">
+                    <h3>🌾 Our Regenerative Purveyors Roster</h3>
+                    <div class="purveyors-list">
+                        <div class="purveyor-item">
+                            <h4>Green String Farm</h4>
+                            <p>Petaluma • Heirloom root vegetables & winter greens</p>
+                        </div>
+                        <div class="purveyor-item">
+                            <h4>Stemple Creek Ranch</h4>
+                            <p>Tomales Bay • 100% Grass-fed regeneratively raised beef</p>
+                        </div>
+                        <div class="purveyor-item">
+                            <h4>Bodega Bay Foragers</h4>
+                            <p>Sonoma Coast • Hand-gathered sea kelp & urchin</p>
+                        </div>
+                        <div class="purveyor-item">
+                            <h4>Bellwether Farms</h4>
+                            <p>Valley Ford • Whole-milk sheep ricotta & cultured butter</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,105 +186,182 @@
         <!-- CSS Grid used for the overall menu layout structure -->
         <section id="menu" class="menu-section">
             <div class="container">
-                <h2 class="section-title">Our Menu</h2>
+                <div class="menu-header">
+                    <h2 class="section-title">Curated Gastronomy</h2>
+                    <p class="section-subtitle">Seasonal Degustation & À La Carte</p>
+                    <p class="menu-note">Menu compositions adjust weekly based on coastal tidal catches and biodynamic farm yields.</p>
+                </div>
+                
+                <!-- Menu filter navigation -->
+                <nav class="menu-filter">
+                    <button class="filter-btn active" data-filter="all">All Highlights</button>
+                    <button class="filter-btn" data-filter="starters">Starters</button>
+                    <button class="filter-btn" data-filter="mains">Mains</button>
+                    <button class="filter-btn" data-filter="desserts">Desserts</button>
+                    <button class="filter-btn" data-filter="pairings">Cellar Pairings</button>
+                </nav>
                 
                 <!-- Menu grid container - demonstrates CSS Grid for two-dimensional layout -->
                 <div class="menu-grid">
                     
-                    <!-- STARTERS CATEGORY -->
-                    <article class="menu-category">
-                        <!-- Flexbox used here for category header alignment -->
-                        <div class="category-header">
-                            <h3>Starters</h3>
+                    <!-- STARTERS -->
+                    <article class="menu-item" data-category="starters">
+                        <div class="item-header">
+                            <h3 class="item-name">Truffle Arancini</h3>
+                            <span class="item-price">$24</span>
                         </div>
-                        
-                        <!-- Individual menu items using semantic article elements -->
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Bruschetta Classica</h4>
-                                <p class="item-description">Grilled bread topped with fresh tomatoes, basil, garlic and extra virgin olive oil</p>
-                            </div>
-                            <span class="item-price">$12</span>
+                        <p class="item-description">Crispy Carnaroli rice, wild black winter truffle, aged 24-month Parmigiano-Reggiano, smoked garlic emulsion.</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                            <span class="tag">GF Available</span>
                         </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Antipasto della Casa</h4>
-                                <p class="item-description">Selection of cured meats, artisanal cheeses, olives and roasted vegetables</p>
-                            </div>
-                            <span class="item-price">$18</span>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Calamari Fritti</h4>
-                                <p class="item-description">Crispy fried squid rings served with marinara sauce and lemon</p>
-                            </div>
-                            <span class="item-price">$15</span>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Franciacorta Brut Rosé, Bellavista 2018</span>
                         </div>
                     </article>
 
-                    <!-- MAINS CATEGORY -->
-                    <article class="menu-category">
-                        <div class="category-header">
-                            <h3>Main Courses</h3>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Spaghetti Carbonara</h4>
-                                <p class="item-description">House-made pasta with pancetta, eggs, pecorino romano and black pepper</p>
-                            </div>
+                    <article class="menu-item" data-category="starters">
+                        <div class="item-header">
+                            <h3 class="item-name">Roasted Beet Carpaccio</h3>
                             <span class="item-price">$22</span>
                         </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Osso Buco alla Milanese</h4>
-                                <p class="item-description">Braised veal shanks with saffron risotto and gremolata</p>
-                            </div>
-                            <span class="item-price">$34</span>
+                        <p class="item-description">Heirloom golden & ruby beets, whipped goat curd, toasted pistachio dukkah, 12-year aged balsamico pearls.</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                            <span class="tag">Gluten-Free</span>
                         </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Branzino al Sale</h4>
-                                <p class="item-description">Whole Mediterranean sea bass baked in sea salt with herbs and lemon</p>
-                            </div>
-                            <span class="item-price">$28</span>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Sancerre Blanc, Domaine Vacheron 2021</span>
                         </div>
                     </article>
 
-                    <!-- DESSERTS CATEGORY -->
-                    <article class="menu-category">
-                        <div class="category-header">
-                            <h3>Desserts</h3>
+                    <article class="menu-item" data-category="starters">
+                        <div class="item-header">
+                            <h3 class="item-name">Hamachi Crudo</h3>
+                            <span class="item-price">$28</span>
                         </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Tiramisu</h4>
-                                <p class="item-description">Traditional layered dessert with espresso-soaked ladyfingers and mascarpone</p>
-                            </div>
-                            <span class="item-price">$9</span>
+                        <p class="item-description">Japanese yellowtail, finger lime caviar, cold-pressed olive oil, shiso oil infusion, citrus ponzu jelly.</p>
+                        <div class="item-tags">
+                            <span class="tag">Dairy-Free</span>
+                            <span class="tag">Gluten-Free</span>
                         </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Panna Cotta</h4>
-                                <p class="item-description">Silky vanilla custard topped with seasonal berry compote</p>
-                            </div>
-                            <span class="item-price">$8</span>
-                        </div>
-                        
-                        <div class="menu-item">
-                            <div class="item-info">
-                                <h4 class="item-name">Gelato Selection</h4>
-                                <p class="item-description">Three scoops of our house-made gelato: pistachio, stracciatella, and limoncello</p>
-                            </div>
-                            <span class="item-price">$10</span>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Albariño do Ferreiro 'Cepas Vellas' 2020</span>
                         </div>
                     </article>
+
+                    <!-- MAIN COURSES -->
+                    <article class="menu-item signature" data-category="mains">
+                        <div class="item-header">
+                            <h3 class="item-name">Herb-Crusted Ribeye</h3>
+                            <span class="signature-badge">Signature</span>
+                            <span class="item-price">$58</span>
+                        </div>
+                        <p class="item-description">45-day dry-aged prime beef, charred shallot puree, bone marrow jus, wild foraged chanterelles, baby glazed carrots.</p>
+                        <div class="item-tags">
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Châteauneuf-du-Pape, Clos des Papes 2017</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="mains">
+                        <div class="item-header">
+                            <h3 class="item-name">Pan-Seared Pacific Salmon</h3>
+                            <span class="item-price">$46</span>
+                        </div>
+                        <p class="item-description">Crispy skin king salmon, saffron fennel velouté, braised tender baby leeks, cured trout roe, preserved Meyer lemon.</p>
+                        <div class="item-tags">
+                            <span class="tag pescatarian">Pescatarian</span>
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Meursault 1er Cru, Genevrières 2019</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="mains">
+                        <div class="item-header">
+                            <h3 class="item-name">Wood-Fired Morel Risotto</h3>
+                            <span class="item-price">$38</span>
+                        </div>
+                        <p class="item-description">Acquerello aged carnaroli, spring morel mushrooms, roasted pine nuts, fermented black garlic butter, shaved pecorino.</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                            <span class="tag">Vegan on Request</span>
+                        </div>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Barolo Monvigliero, Comm. G.B. Burlotto 2018</span>
+                        </div>
+                    </article>
+
+                    <!-- DESSERTS -->
+                    <article class="menu-item" data-category="desserts">
+                        <div class="item-header">
+                            <h3 class="item-name">Valrhona Dark Ganache Tart</h3>
+                            <span class="item-price">$18</span>
+                        </div>
+                        <p class="item-description">70% Guanaja chocolate ganache, smoked Maldon fleur de sel caramel, toasted hazelnut praline crust, gold leaf.</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                        </div>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Quinta do Noval 20-Year Tawny Port</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="desserts">
+                        <div class="item-header">
+                            <h3 class="item-name">Artisanal White Truffle Gelato</h3>
+                            <span class="item-price">$16</span>
+                        </div>
+                        <p class="item-description">Churned fior di latte gelato, Piedmontese acacia white honey, crunchy wild honeycomb shard, micro-basil.</p>
+                        <div class="item-tags">
+                            <span class="tag vegetarian">Vegetarian</span>
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Château d'Yquem Sauternes 2011</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item" data-category="desserts">
+                        <div class="item-header">
+                            <h3 class="item-name">Poached Bergamot Pear</h3>
+                            <span class="item-price">$17</span>
+                        </div>
+                        <p class="item-description">Spiced Chianti Classico reduction, Tahitian vanilla bean mascarpone mousse, crisp crushed almond tuile.</p>
+                        <div class="item-tags">
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                        <div class="wine-pairing">
+                            <span class="pairing-icon">🍷</span>
+                            <span class="pairing-text">Pairing: Vin Santo del Chianti Rufina, Selvapiana</span>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Chef's Tasting Menu CTA -->
+                <div class="prestige-experience">
+                    <div class="prestige-content">
+                        <h3>Prestige Experience</h3>
+                        <h4>7-Course Sommelier Degustation</h4>
+                        <p>A bespoke culinary expedition curated by Chef Elena Rossi with rare vintage cellar selections by Sommelier Lucian Vance.</p>
+                        <div class="prestige-pricing">
+                            <span class="price-main">$145 <small>/ person</small></span>
+                            <span class="price-pairing">Optional Grand Cru Pairing • $95</span>
+                        </div>
+                        <a href="#reservation" class="btn btn-secondary">Book Chef's Tasting</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,109 +370,275 @@
         <!-- Semantic form with proper labels and input types for accessibility -->
         <section id="reservation" class="reservation-section">
             <div class="container">
-                <h2 class="section-title">Make a Reservation</h2>
-                <p class="section-subtitle">Reserve your table for an unforgettable dining experience</p>
+                <div class="reservation-header">
+                    <h2 class="section-title">Secured Table Bookings</h2>
+                    <p class="section-subtitle">Reserve Your Sanctuary</p>
+                    <p class="reservation-note">Join us for an unforgettable evening. Instant digital confirmation with dedicated dietary and anniversary accommodations.</p>
+                </div>
                 
                 <!-- HTML5 form with semantic structure and proper input types -->
                 <form class="reservation-form" action="#" method="post">
                     <!-- Form grid using CSS Grid for responsive form layout -->
                     <div class="form-grid">
                         
-                        <!-- Name input with proper labeling for accessibility -->
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
+                        <!-- Personal Information -->
+                        <div class="form-group full-width">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">👤</span>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
                         </div>
                         
-                        <!-- Email input with HTML5 validation -->
                         <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
+                            <label for="email" class="form-label">Email Address *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">✉️</span>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
                         </div>
                         
-                        <!-- Phone input with tel type for mobile keyboard optimization -->
                         <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <label for="phone" class="form-label">Phone Contact *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📞</span>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
                         </div>
                         
-                        <!-- Date input with HTML5 date picker -->
+                        <!-- Party Details -->
                         <div class="form-group">
-                            <label for="date" class="form-label">Reservation Date</label>
+                            <label for="party-size" class="form-label">Party Size</label>
+                            <select id="party-size" name="party-size" class="form-select" required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6+">6+ Private</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date" class="form-label">Reservation Date *</label>
                             <input type="date" id="date" name="date" class="form-input" required>
                         </div>
                         
-                        <!-- Time input with HTML5 time picker -->
-                        <div class="form-group">
-                            <label for="time" class="form-label">Preferred Time</label>
-                            <input type="time" id="time" name="time" class="form-input" required>
+                        <!-- Seating Preferences -->
+                        <div class="form-group full-width">
+                            <label for="seating" class="form-label">Preferred Seating Atmosphere</label>
+                            <select id="seating" name="seating" class="form-select">
+                                <option value="">Select seating preference</option>
+                                <option value="main">Main Candlelit Dining Room</option>
+                                <option value="counter">Chef's Hearth Counter (Open Kitchen View)</option>
+                                <option value="vault">Underground Sommelier Vault (Tasting Menu Only)</option>
+                                <option value="conservatory">Heated Glass Conservatory</option>
+                            </select>
                         </div>
                         
-                        <!-- Number input for guest count with min/max validation -->
                         <div class="form-group">
-                            <label for="guests" class="form-label">Number of Guests</label>
-                            <input type="number" id="guests" name="guests" class="form-input" min="1" max="12" required>
+                            <label for="time" class="form-label">Seating Time Slot</label>
+                            <small class="form-note">Tables reserved for 2 hours</small>
+                            <select id="time" name="time" class="form-select" required>
+                                <option value="">Select time</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:15">1:15 PM</option>
+                                <option value="17:30">5:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                                <option value="21:45">9:45 PM</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Special Requests -->
+                        <div class="form-group full-width">
+                            <label for="notes" class="form-label">Dietary Allergies & Occasion Notes</label>
+                            <textarea id="notes" name="notes" class="form-textarea" rows="4" placeholder="Please share any dietary restrictions, allergies, or special occasions we should know about..."></textarea>
                         </div>
                     </div>
                     
                     <!-- Submit button styled as primary CTA -->
-                    <button type="submit" class="btn btn-primary btn-full">Reserve Your Table</button>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-icon">🔒</span>
+                        Confirm Reservation • Instant Confirmation
+                    </button>
+                    
+                    <p class="form-disclaimer">
+                        No prepayment or credit card required for standard seatings<br>
+                        Free cancellation up to 24 hours prior to service
+                    </p>
                 </form>
+                
+                <!-- Confirmation message (initially hidden) -->
+                <div class="reservation-success" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Your Table is Reserved</h3>
+                    <p>A concierge confirmation receipt and cellar pre-selection menu have been dispatched to your email.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORY SECTION -->
+        <section id="story" class="story-section">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <p class="story-lead">At Savoria, we believe that exceptional dining begins with exceptional ingredients and unwavering dedication to craft.</p>
+                        <p>Founded in 2018 in San Francisco's historic Montgomery Quarter, our restaurant has earned recognition as a Michelin-selected establishment, celebrating the marriage of classical French techniques with California's abundant coastal offerings.</p>
+                        <p>Our commitment to sustainability drives every decision we make, from our partnerships with regenerative farms to our house-made preparations that honor time-tested traditions.</p>
+                    </div>
+                    <div class="story-awards">
+                        <div class="award-item">
+                            <span class="award-icon">⭐</span>
+                            <div class="award-content">
+                                <h4>Michelin Guide 2024</h4>
+                                <p>Selected for exceptional cuisine and service</p>
+                            </div>
+                        </div>
+                        <div class="award-item">
+                            <span class="award-icon">🍷</span>
+                            <div class="award-content">
+                                <h4>Wine Spectator Best of Award</h4>
+                                <p>Recognized for outstanding wine program</p>
+                            </div>
+                        </div>
+                        <div class="award-item">
+                            <span class="award-icon">✓</span>
+                            <div class="award-content">
+                                <h4>OpenTable Diners' Choice</h4>
+                                <p>Rated by verified diners nationwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
     <!-- Semantic landmark containing contact info and additional links -->
-    <footer id="contact" class="site-footer">
+    <footer id="visit" class="site-footer">
         <div class="container">
-            <!-- Footer content using flexbox for responsive layout -->
-            <div class="footer-content">
-                
-                <!-- Operating hours section -->
-                <div class="footer-section">
-                    <h3>Hours</h3>
-                    <div class="hours-list">
-                        <div class="hours-item">
-                            <span>Monday - Thursday:</span>
-                            <span>5:00 PM - 10:00 PM</span>
+            <div class="footer-main">
+                <!-- Location & Hours -->
+                <div class="footer-section location-hours">
+                    <h3>Location & Concierge</h3>
+                    <p class="section-subtitle">Plan Your Visit</p>
+                    
+                    <div class="location-info">
+                        <h4>The Savoria Dining Room</h4>
+                        <p>Situated in the Historic Montgomery Quarter, our dining salon offers an intimate escape sheltered from the city tempo.</p>
+                    </div>
+                    
+                    <div class="hours-grid">
+                        <div class="hours-block">
+                            <div class="hours-icon">☀️</div>
+                            <div class="hours-content">
+                                <h5>Wednesday – Sunday Luncheon</h5>
+                                <p>11:30 AM – 2:30 PM • Seasonal 3-course prix fixe available</p>
+                            </div>
                         </div>
-                        <div class="hours-item">
-                            <span>Friday - Saturday:</span>
-                            <span>5:00 PM - 11:00 PM</span>
+                        
+                        <div class="hours-block">
+                            <div class="hours-icon">🌙</div>
+                            <div class="hours-content">
+                                <h5>Tuesday – Sunday Dinner Service</h5>
+                                <p>5:30 PM – 11:00 PM • À la carte and 7-course degustation</p>
+                            </div>
                         </div>
-                        <div class="hours-item">
-                            <span>Sunday:</span>
-                            <span>4:00 PM - 9:00 PM</span>
+                        
+                        <div class="hours-block">
+                            <div class="hours-icon">🍷</div>
+                            <div class="hours-content">
+                                <h5>Subterranean Cellar Bar</h5>
+                                <p>Friday & Saturday • Open until 1:00 AM • Walk-ins welcome</p>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <div class="policies">
+                        <h5>Dress Code & Children Policy</h5>
+                        <p>We kindly request Smart Elegant attire (collared shirts or dinner jackets encouraged; athletic wear discouraged). Due to open hearth cooking, children above age 10 are welcomed in the main salon.</p>
+                    </div>
+                    
+                    <div class="parking-info">
+                        <span class="parking-icon">🅿️</span>
+                        <span>Complimentary White-Glove Valet at Main Portico</span>
                     </div>
                 </div>
                 
-                <!-- Location and contact info -->
-                <div class="footer-section">
-                    <h3>Location & Contact</h3>
-                    <address class="contact-info">
-                        <p>123 Italian Way<br>
-                        Little Italy, NY 10012</p>
-                        <p>Phone: <a href="tel:+12125551234">(212) 555-1234</a></p>
-                        <p>Email: <a href="mailto:info@bellavista.com">info@bellavista.com</a></p>
-                    </address>
-                </div>
-                
-                <!-- Social media links -->
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Visit our Facebook page">Facebook</a>
-                        <a href="#" class="social-link" aria-label="Follow us on Instagram">Instagram</a>
-                        <a href="#" class="social-link" aria-label="Follow us on Twitter">Twitter</a>
+                <!-- Contact & Address -->
+                <div class="footer-section contact-section">
+                    <div class="address-block">
+                        <span class="address-icon">📍</span>
+                        <div class="address-content">
+                            <h4>Savoria Bistro & Cellar</h4>
+                            <address>
+                                428 Montgomery Street • Financial District<br>
+                                San Francisco, CA 94104
+                            </address>
+                            <a href="#" class="directions-link">Get Driving Directions →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <h5>Contact & Inquiries</h5>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <a href="tel:8005553463">(800) 555-DINE</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <a href="mailto:concierge@savoriabistro.com">concierge@savoriabistro.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="transit-info">
+                        <h5>Transit & Arrival</h5>
+                        <p>2 blocks from Montgomery St BART / Muni Metro Station. Cable Car California Line stop directly at corner.</p>
+                    </div>
+                    
+                    <div class="private-dining">
+                        <h5>Private Dining Hire</h5>
+                        <p>Full cellar vault buyout available for up to 32 guests. Dedicated sommelier and custom printed menus included.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Copyright notice -->
+            <!-- Footer Brand & Newsletter -->
+            <div class="footer-brand">
+                <div class="brand-info">
+                    <h3>Savoria</h3>
+                    <p>An evening sanctuary celebrating tactile culinary artistry, rare biodynamic cellar selections, and understated candlelit hospitality.</p>
+                    <div class="brand-icons">
+                        <span>🗺️</span>
+                        <span>🍷</span>
+                        <span>🍽️</span>
+                        <span>✉️</span>
+                    </div>
+                </div>
+                
+                <div class="newsletter">
+                    <h4>Cellar Dispatch</h4>
+                    <p>Receive exclusive releases from our private vineyard collections and seasonal chef degustations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">→</button>
+                    </form>
+                    <small>Discreet quarterly dispatches. No spam.</small>
+                </div>
+            </div>
+            
+            <!-- Copyright & Links -->
             <div class="footer-bottom">
-                <p>&copy; 2024 Bella Vista Restaurant. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Private Dining Charter</a>
+                    <a href="#">Wine Allocation List</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p>&copy; 2025 Savoria Bistro & Cellar. All rights reserved.</p>
             </div>
         </div>
     </footer>
