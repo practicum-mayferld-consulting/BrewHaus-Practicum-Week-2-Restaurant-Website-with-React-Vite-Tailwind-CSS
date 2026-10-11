@@ -1,92 +1,115 @@
-# 🎯 Assessment Defense Cheat Sheet: Restaurant Website
+# 🎯 Assessment Defense Cheat Sheet: Savoria Bistro & Cellar
+
+## 🍷 **Advanced Luxury Restaurant Website**
 
 ## 📋 Key Technical Decisions & Explanations
 
-### 1. **Box-Sizing: Border-Box Implementation**
-**What I did:** Applied `box-sizing: border-box` to all elements (`*`, `*::before`, `*::after`)
+### 1. **Sophisticated Dark Luxury Design System**
+**What I implemented:** Complete design system based on Material Design principles with warm luxury aesthetics
 
-**Why this matters:**
-- **Predictable layouts:** Width/height includes padding and border, preventing unexpected overflows
-- **Easier responsive design:** No need to calculate padding/border when setting widths
-- **Prevents horizontal scroll:** Elements won't exceed their containers due to added padding
-- **Industry standard:** Modern CSS best practice for layout control
+**Color Strategy:**
+- **Deep Charcoal Foundation:** `#131313` primary surface with 8-level elevation system
+- **Warm Amber Accents:** `#D4A373` brushed gold for interactive elements and highlights  
+- **Elegant Text Hierarchy:** Cream `#FAF7F2` for headings, muted `#D6D0C5` for body text
+- **Sophisticated Borders:** `rgba(212, 163, 115, 0.15)` for subtle element separation
 
-**Demo line to evaluator:** *"I used universal box-sizing border-box which includes padding and borders in the element's total width, preventing the common issue where adding padding breaks responsive layouts."*
+**Why this approach:**
+- **Restaurant Psychology:** Dark backgrounds create intimate, upscale dining atmosphere
+- **Brand Positioning:** Warm metallics suggest luxury without ostentation  
+- **Visual Hierarchy:** High contrast ensures readability while maintaining elegance
+- **Accessibility:** All color combinations exceed WCAG AA contrast requirements
 
----
-
-### 2. **CSS Custom Properties (Variables) Strategy**
-**Where implemented:** `:root` section with comprehensive variable system
-
-**Categories defined:**
-- **Colors:** Primary (#8B4513), secondary (#D2691E), accent (#228B22)
-- **Typography:** Font families, sizes
-- **Spacing:** Systematic spacing scale (xs: 0.5rem → xl: 4rem)
-- **Layout:** Max-width, border-radius, shadows
-
-**Benefits I can highlight:**
-- **Maintainability:** Change one value, updates everywhere
-- **Consistency:** Prevents random spacing/color choices
-- **Theme switching:** Easy to implement dark mode later
-- **Performance:** Better than Sass variables (native CSS)
-
-**Demo line:** *"I created a systematic design token system using CSS custom properties, ensuring visual consistency and making the site easy to maintain or rebrand."*
+**Demo line:** *"I chose a dark luxury aesthetic because fine dining establishments use low lighting to create intimacy, and the warm amber accents mirror the golden hour lighting found in premium restaurants."*
 
 ---
 
-### 3. **Flexbox vs CSS Grid - Strategic Usage**
+### 2. **Advanced Typography Hierarchy**
+**Implementation:** Dual-font system with responsive scaling
 
-#### **Flexbox Used For (One-Dimensional Layouts):**
+**Font Pairing Strategy:**
+- **Playfair Display (Serif):** Headlines, menu items, pricing - conveys culinary heritage
+- **Plus Jakarta Sans (Sans-serif):** Body text, forms, navigation - ensures readability
+- **Responsive Typography:** `clamp(2.5rem, 8vw, 4.5rem)` for fluid scaling without breakpoints
+- **Editorial Details:** Proper italic usage for wine names, letter-spacing for labels
 
-**Navigation Bar (.navbar):**
+**Technical Excellence:**
 ```css
-display: flex;
-justify-content: space-between; /* Logo left, nav right */
-align-items: center; /* Vertical centering */
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
 ```
-**Why Flexbox:** Single row layout, need space-between distribution
 
-**Menu Item Layout (.menu-item):**
+**Benefits:**
+- **Brand Sophistication:** Serif conveys culinary tradition and craftsmanship
+- **Optimal Readability:** Sans-serif ensures clear communication in interface elements
+- **Performance:** `clamp()` reduces media query complexity
+- **Accessibility:** Proper contrast ratios and scalable text for all users
+
+**Demo line:** *"I used Playfair Display for headings because serif fonts psychologically convey tradition and craftsmanship—crucial for a restaurant built on heritage and technique."*
+
+---
+
+### 3. **Strategic Layout System: Grid vs Flexbox**
+
+#### **CSS Grid Used For (Two-Dimensional Complex Layouts):**
+
+**Philosophy Section (.philosophy-grid):**
 ```css
-display: flex;
-justify-content: space-between; /* Name/desc left, price right */
-align-items: flex-start;
+display: grid;
+grid-template-columns: 1fr 2fr;  /* Asymmetric: chef profile + content */
+gap: var(--space-2xl);
 ```
-**Why Flexbox:** Need to align price to the right while keeping content left
+**Why Grid:** Need precise control over chef profile width vs. content area
 
-**Footer Content (.footer-content):**
+**Menu System (.menu-grid):**
 ```css
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap; /* Mobile responsive */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+gap: var(--space-xl);
 ```
-**Why Flexbox:** Need equal distribution with responsive wrapping
+**Why Grid:** Menu cards need consistent sizing with intelligent responsive behavior
 
-#### **CSS Grid Used For (Two-Dimensional Layouts):**
-
-**About Section Grid (.about-grid):**
+**Reservation Form (.form-grid):**
 ```css
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: var(--spacing-lg);
 ```
-**Why Grid:** Need responsive columns that automatically adjust count
+**Why Grid:** Form fields need to maintain relationships across rows and columns
 
-**Menu Categories Grid (.menu-grid):**
+#### **Flexbox Used For (One-Dimensional Alignments):**
+
+**Navigation (.navbar):**
 ```css
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+display: flex;
+justify-content: space-between;  /* Logo left, nav center, CTA right */
+align-items: center;
 ```
-**Why Grid:** Three categories need equal width distribution with responsive behavior
+**Why Flexbox:** Single-row distribution with perfect center alignment
 
-**Form Layout (.form-grid):**
+**Menu Item Layout (.item-header):**
 ```css
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+display: flex;
+justify-content: space-between;  /* Dish name left, price right */
+align-items: flex-start;
 ```
-**Why Grid:** Form fields need two-dimensional arrangement (rows and columns)
+**Why Flexbox:** Need price to stick to right edge regardless of description length
 
-**Key talking point:** *"I chose Flexbox for one-dimensional alignments like navigation bars and menu items, but used CSS Grid for complex two-dimensional layouts like the three-column menu section and responsive form grid."*
+**Hero Actions (.hero-actions):**
+```css
+display: flex;
+justify-content: center;
+gap: var(--space-lg);
+flex-wrap: wrap;  /* Responsive wrapping */
+```
+**Why Flexbox:** Button group needs centering with responsive behavior
+
+**Key Decision Matrix:**
+- **Use Grid when:** You need precise 2D control, card layouts, form structures
+- **Use Flexbox when:** You need 1D distribution, navigation bars, button groups
+
+**Demo line:** *"I chose CSS Grid for the menu layout because I needed the cards to maintain consistent widths while automatically adjusting the number of columns—Grid's auto-fit with minmax handles this perfectly, while Flexbox would create uneven sizing."*
 
 ---
 
