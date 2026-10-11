@@ -1,3 +1,9 @@
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=600&size=28&duration=3000&pause=1000&color=D4AF37&center=true&vCenter=true&width=800&lines=Savoria+Bistro+%26+Cellar;Luxury+Restaurant+Website;An+Elegant+Fine+Dining+Experience" alt="Typing SVG" />
+  </a>
+</h1>
+
 # Savoria Bistro & Cellar - Luxury Restaurant Website
 
 A sophisticated single-page restaurant website showcasing modern CSS techniques, accessibility best practices, and responsive design principles. Built with pure HTML5 and CSS3 without any frameworks or libraries.
