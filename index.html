@@ -7,6 +7,17 @@
     <title>Savoria Bistro & Cellar - Michelin Selected Artisanal Dining</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        /* Prevent flash of unstyled animations on load */
+        .hero-title,
+        .hero-description,
+        .hero-actions,
+        .hero-rating,
+        .hero-badges .badge,
+        .evening-dispatch {
+            opacity: 0;
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -642,5 +653,149 @@
             </div>
         </div>
     </footer>
+<script>
+    /* =============================================
+       SAVORIA — Animations & Interactions Script
+       Pure vanilla JS, zero dependencies
+    ============================================= */
+
+    /* 1. Navbar: shrink + highlight active section on scroll */
+    const header = document.querySelector('.site-header');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    function onScroll() {
+        /* Shrink header after scrolling 60px */
+        header.classList.toggle('scrolled', window.scrollY > 60);
+
+        /* Highlight active nav link based on scroll position */
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* 2. Scroll-reveal: observe elements with .reveal class */
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                /* Animate section title underline */
+                const title = entry.target.querySelector('.section-title');
+                if (title) title.classList.add('line-visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    /* Add .reveal to all major content blocks */
+    const revealTargets = [
+        '.about-story', '.about-philosophy', '.about-ingredients',
+        '.chef-profile', '.philosophy-stats', '.text-block',
+        '.chef-quote', '.purveyor-item',
+        '.menu-item', '.prestige-experience',
+        '.award-item', '.story-text',
+        '.hours-block', '.footer-section',
+        '.footer-brand'
+    ];
+
+    revealTargets.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            el.classList.add('reveal');
+            revealObserver.observe(el);
+        });
+    });
+
+    /* Observe section titles separately for underline animation */
+    document.querySelectorAll('.section-title').forEach(title => {
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('line-visible');
+                    titleObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        titleObserver.observe(title);
+    });
+
+    /* 3. Menu filter: show/hide items by category */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item[data-category]');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+
+            /* Update active button */
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            /* Filter menu items with smooth fade */
+            menuItems.forEach(item => {
+                const match = filter === 'all' || item.dataset.category === filter;
+                if (match) {
+                    item.style.display = '';
+                    /* Trigger re-reveal animation */
+                    item.classList.remove('visible');
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => item.classList.add('visible'));
+                    });
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    /* 4. Reservation form: show success message on submit */
+    const form = document.querySelector('.reservation-form');
+    const successMsg = document.querySelector('.reservation-success');
+
+    if (form && successMsg) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            form.style.opacity = '0';
+            form.style.transform = 'translateY(-16px)';
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+                successMsg.style.opacity = '0';
+                successMsg.style.transform = 'translateY(16px)';
+                successMsg.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        successMsg.style.opacity = '1';
+                        successMsg.style.transform = 'translateY(0)';
+                    });
+                });
+            }, 400);
+        });
+    }
+
+    /* 5. Smooth scroll offset for fixed header */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            const offset = header.offsetHeight + 16;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
+    });
+</script>
 </body>
 </html>
