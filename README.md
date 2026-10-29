@@ -7,7 +7,7 @@
 # Savoria Bistro & Cellar - Luxury Restaurant Website
 
 <div align="center">
-  <img src="./screenshots/homepage.png" alt="Savoria Bistro & Cellar - Luxury Restaurant Website" width="100%" />
+  <img src="https://i.imgur.com/K9KNQzE.png" alt="Savoria Bistro & Cellar - Luxury Restaurant Website" width="100%" />
 </div>
 
 A sophisticated single-page restaurant website showcasing modern CSS techniques, accessibility best practices, and responsive design principles. Built with pure HTML5 and CSS3 without any frameworks or libraries.
