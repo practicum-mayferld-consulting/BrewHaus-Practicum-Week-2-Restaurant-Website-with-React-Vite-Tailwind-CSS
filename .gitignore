@@ -2,6 +2,10 @@
 SAVORIA_FEATURES.md
 assessment-defense-cheat-sheet.md
 
+# Dependencies
+node_modules/
+dist/
+
 # IDE and editor files
 .vscode/
 .idea/
