@@ -13,19 +13,19 @@
   </a>
 </h1>
 
-# Savoria Bistro & Cellar — Week 2 Assignment
+# Savoria Bistro & Cellar  Week 2 Assignment
 
 <div align="center">
   <img src="https://i.imgur.com/K9KNQzE.png" alt="Savoria Bistro & Cellar" width="100%" />
 </div>
 
-Rebuild of the Week 1 Savoria Bistro restaurant site using React, Vite, and Tailwind CSS. Same business, same content, same design — rebuilt with components, state, and utility-first styling.
+Rebuild of the Week 1 Savoria Bistro restaurant site using React, Vite, and Tailwind CSS. Same business, same content, same design  rebuilt with components, state, and utility-first styling.
 
 ---
 
 ## Assignment Rules
 
-- Same group project, solo code written independently — no copying
+- Same group project, solo code written independently  no copying
 - Rebuild the Week 1 site with React + Tailwind, same look and content
 - No TypeScript, no extra libraries, data stays hardcoded (backend comes in Week 3)
 
@@ -40,7 +40,7 @@ Rebuild of the Week 1 Savoria Bistro restaurant site using React, Vite, and Tail
 - Configured Tailwind CSS via `tailwind.config.js` with custom luxury dark palette and font families
 - Set up PostCSS via `postcss.config.js` with `tailwindcss` and `autoprefixer`
 - Updated `.gitignore` to exclude `node_modules/` and `dist/`
-- Removed old `styles.css` entirely — all styling done via Tailwind utility classes
+- Removed old `styles.css` entirely  all styling done via Tailwind utility classes
 
 **2. Tailwind Configuration**
 - Extended theme with full Savoria color system: `surface`, `primary`, `secondary`, `tertiary`, `cream`, `muted`
@@ -53,7 +53,7 @@ Split the entire page into 8 independent React components:
 
 | Component | File | Responsibility |
 |---|---|---|
-| App | `src/App.jsx` | Root component — assembles all sections |
+| App | `src/App.jsx` | Root component  assembles all sections |
 | Header | `src/components/Header.jsx` | Fixed navbar with scroll shrink via `useEffect` |
 | Hero | `src/components/Hero.jsx` | Full-height hero, H1, badges, CTAs, dispatch bar |
 | About | `src/components/About.jsx` | Chef profile, stats grid, purveyors, blockquote |
@@ -64,16 +64,16 @@ Split the entire page into 8 independent React components:
 | Footer | `src/components/Footer.jsx` | Hours, address, newsletter form |
 
 **4. Central Data File**
-- Created `src/data/menuItems.js` — single source of truth for all menu data
+- Created `src/data/menuItems.js`  single source of truth for all menu data
 - 9 dish objects in an array, each with: `id`, `category`, `name`, `price`, `description`, `tags`, `pairing`, `signature`
-- Menu component imports and filters this array — zero copy-pasted JSX for dish content
+- Menu component imports and filters this array  zero copy-pasted JSX for dish content
 
 **5. useState Filter (core requirement)**
 - Implemented category filter in `Menu.jsx` using `useState`
 - `activeFilter` state holds current selection: `'all'` | `'starters'` | `'mains'` | `'desserts'`
-- Clicking a filter button calls `setActiveFilter(value)` — React re-renders — derived `filtered` array updates automatically
+- Clicking a filter button calls `setActiveFilter(value)`  React re-renders  derived `filtered` array updates automatically
 - Active button gets highlighted Tailwind classes conditionally via ternary
-- No manual DOM manipulation — purely declarative React state
+- No manual DOM manipulation  purely declarative React state
 
 ```jsx
 const [activeFilter, setActiveFilter] = useState('all')
@@ -83,16 +83,16 @@ const filtered = activeFilter === 'all'
   : menuItems.filter((item) => item.category === activeFilter)
 ```
 
-**6. Controlled Component — GuestStepper**
+**6. Controlled Component  GuestStepper**
 - Built `GuestStepper.jsx` following the exact same pattern as `QuantityStepper` from the Week 2 course material
-- Component owns no state — it receives `value` (number) and `onChange` (function) as props
+- Component owns no state  it receives `value` (number) and `onChange` (function) as props
 - Parent `Reservation.jsx` holds `const [guests, setGuests] = useState(2)` and passes it down
 - Increment button calls `onChange(Math.min(max, value + 1))`
 - Decrement button calls `onChange(Math.max(min, value - 1))`
 - Buttons are `disabled` when at min or max boundary
 
 ```jsx
-// GuestStepper.jsx — no useState inside
+// GuestStepper.jsx  no useState inside
 export default function GuestStepper({ value, onChange, min = 1, max = 12 }) {
   return (
     <>
@@ -103,7 +103,7 @@ export default function GuestStepper({ value, onChange, min = 1, max = 12 }) {
   )
 }
 
-// Reservation.jsx — owns the state, passes it down
+// Reservation.jsx  owns the state, passes it down
 const [guests, setGuests] = useState(2)
 <GuestStepper value={guests} onChange={setGuests} min={1} max={12} />
 ```
@@ -265,7 +265,7 @@ npm run build
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License  see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
