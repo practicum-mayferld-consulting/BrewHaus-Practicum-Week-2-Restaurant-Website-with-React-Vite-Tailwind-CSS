@@ -188,13 +188,59 @@ src/
 
 </div>
 
-| Tool | Version | Purpose |
-|---|---|---|
-| React | 18.3.1 | Component-based UI |
-| Vite | 5.4.10 | Build tool and dev server |
-| Tailwind CSS | 3.4.14 | Utility-first styling |
-| PostCSS | 8.4.47 | CSS processing |
-| Autoprefixer | 10.4.20 | Vendor prefixes |
+<table align="center">
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Version</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="https://cdn.simpleicons.org/react/61DAFB" width="35" />
+        <strong> React</strong>
+      </td>
+      <td>18.3.1</td>
+      <td>Component-based UI</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://cdn.simpleicons.org/vite/646CFF" width="35" />
+        <strong> Vite</strong>
+      </td>
+      <td>5.4.10</td>
+      <td>Build tool and dev server</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="35" />
+        <strong> Tailwind CSS</strong>
+      </td>
+      <td>3.4.14</td>
+      <td>Utility-first styling</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://cdn.simpleicons.org/postcss/DD3A0A" width="35" />
+        <strong> PostCSS</strong>
+      </td>
+      <td>8.4.47</td>
+      <td>CSS processing</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://cdn.simpleicons.org/autoprefixer/DD3735" width="35" />
+        <strong> Autoprefixer</strong>
+      </td>
+      <td>10.4.20</td>
+      <td>Vendor prefixes</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ---
 
