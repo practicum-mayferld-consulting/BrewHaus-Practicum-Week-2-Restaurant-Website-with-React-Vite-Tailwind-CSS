@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,js,html,git,github,nodejs,npm&perline=10" />
+</p>
+
+
+
+
+
+
 <h1 align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=600&size=28&duration=3000&pause=1000&color=D4AF37&center=true&vCenter=true&width=800&lines=Savoria+Bistro+%26+Cellar;React+%2B+Vite+%2B+Tailwind+CSS;Week+2+Assignment" alt="Typing SVG" />
