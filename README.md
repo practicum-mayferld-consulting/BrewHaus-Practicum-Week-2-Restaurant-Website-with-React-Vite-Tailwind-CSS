@@ -19,6 +19,7 @@
   <img src="https://res.cloudinary.com/wemlub7x/image/upload/v1793371824/Screenshot_From_2026-10-30_14-47-20_moreod.png" alt="Savoria Bistro & Cellar" width="100%" />
 </div>
 
+
 Rebuild of the Week 1 Savoria Bistro restaurant site using React, Vite, and Tailwind CSS. Same business, same content, same design  rebuilt with components, state, and utility-first styling.
 
 ---
